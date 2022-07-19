@@ -25,11 +25,31 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-image: url(loginimage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+
   }
   
   .left-login > h1{
-    color: #FF69B4;
-    font-size: 2vw;  
+    color: white;
+    font-size: 1.5vw;
+    position: absolute;
+    top: 0;
+    left: 1;
+    animation: neon 3s infinite;
+  }
+
+  @keyframes neon{
+    to {
+      text-shadow: white 0px 0px 10px,
+      #FF69B4 0px 0px 25px,
+      #FF69B4 0px 0px 40px;
+    }
+    from{
+    text-shadow:none;  
+    }
   }
 
   .right-login{
@@ -106,10 +126,6 @@ body {
   transition: opacity 400ms;
 }
 
-.left-image{
-  width: 35vw;
-}
-
 @media only screen and (max-width: 950px){
   .card-login{
     width: 85%;
@@ -133,10 +149,6 @@ body {
   .right-login{
     width: 100%;
     height: auto;
-  }
-
-  .left-image{
-    width: 50vw;
   }
 
   .card-login{
